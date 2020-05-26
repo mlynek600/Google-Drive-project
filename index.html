@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Google Drive API</title>
+  </head>
+  <body>
+    <h1>Google Drive API</h1>
+
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <h2>Wyszukaj pliki, które zawierają wpisany tekst (max. 10):</h2>
+    <input id="input" type="text" />
+    <button type="button" name="button" onclick="search()">Szukaj</button>
+    <pre id="search-container"></pre>
+    <script src="script.js" charset="utf-8"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+    ></script>
+  </body>
+</html>
